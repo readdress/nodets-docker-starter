@@ -1,0 +1,24 @@
+version: "3"
+
+services:
+    nodets:
+        build:
+            args:
+                user: ${NODE_USER}
+                uid: ${NODE_USER_UID}
+                port: ${NODE_PORT}
+            context: .
+            dockerfile: ./docker/dev.Dockerfile
+        image: nodets:dev
+        container_name: nodets
+        restart: unless-stopped
+        volumes:
+            - ./:/home/${NODE_USER}/app:z # Notice the :z at the end, you need that if you have SELINUX enabled
+        networks:
+            - nodestarter
+        ports:
+            - "8080:${NODE_PORT}"
+
+networks:
+    nodestarter:
+        driver: bridge
