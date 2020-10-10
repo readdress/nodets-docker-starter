@@ -4,6 +4,14 @@ module.exports = {
 	clearMocks: true,
 	coverageDirectory: "coverage",
 	testEnvironment: "node",
+	moduleFileExtensions: [
+		"ts",
+		"tsx",
+		"js",
+		"jsx",
+		"json",
+		"node",
+	],
 	setupFilesAfterEnv: [
 		"./jest.setup.ts"
 	],

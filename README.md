@@ -53,3 +53,8 @@ Add jest;
 docker-compose exec nodets npm install --save-dev jest ts-jest @types/jest
 
 docker-compose exec nodets npm test
+
+
+
+Build production image;
+docker-compose exec nodets npm run build

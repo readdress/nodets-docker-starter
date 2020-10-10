@@ -1,9 +1,25 @@
 {
     "compilerOptions": {
-        "target": "ES2015",
+        "rootDir": "./src",
+        "outDir": "./build",
+        "target": "ES6",
         "module": "commonjs",
         "strict": true,
         "moduleResolution": "node",
-        "esModuleInterop": true
-    }
+        "esModuleInterop": true,
+        "noImplicitAny": false,
+        "allowSyntheticDefaultImports": true,
+        "experimentalDecorators": true,
+        "allowJs": true,
+        "importHelpers": true,
+    },
+    "include": [
+        "src/**/*",
+        "__tests__/**/*"
+    ],
+    "exclude": [
+        "node_modules",
+        "build",
+        "jest.setup.ts"
+    ]
 }

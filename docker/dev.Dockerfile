@@ -32,4 +32,6 @@ ENV PORT=$port
 
 USER $user
 
+EXPOSE $port
+
 CMD ["npm", "start"]
